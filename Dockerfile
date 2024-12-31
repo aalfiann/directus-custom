@@ -13,11 +13,8 @@ RUN npm install
 # Copy the entire project directory to the container
 COPY . .
 
-# Run the run.js script
+# Run the build.sh script
 RUN chmod +x ./build.sh
-
-# Build the application during image build
-RUN npm run build
 
 # Expose the port your application runs on (update if necessary)
 EXPOSE 8055
