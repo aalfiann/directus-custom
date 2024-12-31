@@ -6,9 +6,8 @@
     "url": "https://linktr.ee/aalfiann"
   },
   "scripts": {
-    "start": "node index.cjs",
     "build": "./build.sh",
-    "dev": "npm run build && npm start"
+    "start": "npm run build && node index.cjs"
   },
 	"version": "11.3.5",
   "dependencies": {

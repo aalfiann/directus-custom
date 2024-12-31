@@ -33,7 +33,7 @@ sudo chmod +x build.sh
 
 then, run this project  
 ```bash
-npm run dev
+npm start
 ```
 
 **DONE**, now open your browser to [http://localhost:8055](http://localhost:8055).
@@ -51,7 +51,7 @@ This project includes the tools and structure for developing extensions for Dire
 1. **Develop Your Extension**:
 Add your custom code and logic to your extension directory. You can use the provided examples as a reference.
 2. **Test Your Extension**:
-Run "./build.sh" to build , move and start project with your extension.
+Run "npm start" it will build, move and start project with your extension.
 
 Follow Official Documentation Here [Directus Bundle Extension](https://docs.directus.io/extensions/bundles.html)
 
@@ -65,23 +65,11 @@ Simply update your database configuration accordingly in the .env file.
 VPS with a minimum of 2 GB of RAM should be sufficient to run both MySQL and the Node.js project for moderately heavy traffic.
 
 **2. Using Docker**  
-This project included `Dockerfile` and `docker-compose.yml`. So you're able to deploy this project into docker container.
-
-**How to deploy into Docker**  
-Build the source code at the first time.
-```bash
-npm install
-npm run build
-```
-
-Make sure everything is fine,  
-Then you're able to deploy into Docker
+This project included `Dockerfile` and `docker-compose.yml`.  
+Simply run this command in current directory.
 ```bash
 docker compose up -d
 ```
-
-Note:
-- Dockerfile doesn't include a process to build the source especially for your extensions. If you know how to do it, please create a PR.
 
 ## Credits
 This project is inspired by the idea of [directus-project-with-extensions-quickstart](https://github.com/yohita/directus-project-with-extensions-quickstart).
