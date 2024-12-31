@@ -1,0 +1,41 @@
+{
+	"name": "directus-extension-custom",
+	"version": "1.0.0",
+	"type": "module",
+	"directus:extension": {
+		"host": "^10.1.10",
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "endpoint",
+				"name": "api",
+				"source": "src/api/index.js"
+			},
+			{
+				"type": "hook",
+				"name": "hooks",
+				"source": "src/hooks/index.js"
+			}
+		]
+	},
+	"description": "This extension will allow you to create your custom API in Directus",
+	"icon": "extension",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.1.10"
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "directus-custom",
+  "description": "Directus with Custom extension that will allow you to create a custom API",
+  "author": {
+    "name": "M ABD AZIZ ALFIAN",
+    "url": "https://linktr.ee/aalfiann"
+  },
+  "scripts": {
+    "start": "node index.cjs",
+    "build": "./build.sh",
+    "dev": "npm run build && npm start"
+  },
+	"version": "11.3.5",
+  "dependencies": {
+    "directus": "11.3.5"
+  }
+}
