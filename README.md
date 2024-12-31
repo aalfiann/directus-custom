@@ -67,6 +67,22 @@ VPS with a minimum of 2 GB of RAM should be sufficient to run both MySQL and the
 **2. Using Docker**  
 This project included `Dockerfile` and `docker-compose.yml`. So you're able to deploy this project into docker container.
 
+**How to deploy into Docker**  
+Build the source code at the first time.
+```bash
+npm install
+npm run build
+```
+
+Make sure everything is fine,  
+Then you're able to deploy into Docker
+```bash
+docker compose up -d
+```
+
+Note:
+- Dockerfile doesn't include a process to build the source especially for your extensions. If you know how to do it, please create a PR.
+
 ## Credits
 This project is inspired by the idea of [directus-project-with-extensions-quickstart](https://github.com/yohita/directus-project-with-extensions-quickstart).
 
