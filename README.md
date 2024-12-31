@@ -17,21 +17,21 @@ Just code like the way you did to other NodeJS apps.
 
 ## Usage
 
-1. Setup Database
-You have to setup database MySQL 8.
+**1. Setup Database**  
+You have to setup database MySQL 8.  
 Then import the `database/default_db.sql` to your MySQL.
 
-2. Create `.env`
-You can just copy the `.env-sample` to `.env`
+**2. Create `.env`**  
+You can just copy the `.env-sample` to `.env`  
 then, edit the `.env`, take a look at database configuration in there.
 
-3. Give executable permission
-Go to the source code directory, then
+**3. Give executable permission**  
+Go to the source code directory, then  
 ```bash
 sudo chmod +x build.sh
 ```
 
-then, run this project
+then, run this project  
 ```bash
 npm run dev
 ```
@@ -57,13 +57,14 @@ Follow Official Documentation Here [Directus Bundle Extension](https://docs.dire
 
 ## Deployment
 There are two ways to deploy this project:
-**1. Using NodeJS**
+
+**1. Using NodeJS**  
 Treat this project as just another Node.js project and follow standard deployment procedures. No special actions are needed.
 Simply update your database configuration accordingly in the .env file.
 
 VPS with a minimum of 2 GB of RAM should be sufficient to run both MySQL and the Node.js project for moderately heavy traffic.
 
-**2. Using Docker**
+**2. Using Docker**  
 This project included `Dockerfile` and `docker-compose.yml`. So you're able to deploy this project into docker container.
 
 ## Credits
