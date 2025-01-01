@@ -3,7 +3,12 @@ Directus with Custom extension that will allow you to create a custom API.
 
 ## The Idea
 When you're using the free version of Directus, they're packaging it using Docker Image as default.
-So you're limited, you can't bundle your project and you will always redesign your new project everytime.
+
+The problem is:
+- You're can't run Directus in most shared hosting providers.
+- You're hard to create or test a custom extension.
+- You're limited, you can't create a boilerplate for your project  
+and you will always redesign your new project with fresh/empty directus collections.
 
 The purpose of this project is to make you easier to develop your project with Directus.
 Just code like the way you did to other NodeJS apps.
@@ -33,7 +38,8 @@ sudo chmod +x build.sh
 
 then, run this project  
 ```bash
-npm start
+npm install
+npm run dev
 ```
 
 **DONE**, now open your browser to [http://localhost:8055](http://localhost:8055).
@@ -45,13 +51,35 @@ password: d3m0d3m0
 - Server is running on http://localhost:8055
 - api on :  http://localhost:8055/api
 
+
+## Can I change the database ?
+Absolutely you can, just edit your `.env`, make sure change the database connection.
+
+then now import the database structure:
+
+**1. Fresh Database**
+```bash
+npx directus database install
+```
+
+**2. Migrate to latest version**
+```bash
+npx directus database migrate:latest
+```
+
+**3. Fresh Latest Database Version**
+Make sure you have the latest Directus version.
+```bash
+npx directus bootstrap
+```
+
 ## Extension Development
 
 This project includes the tools and structure for developing extensions for Directus.
 1. **Develop Your Extension**:
 Add your custom code and logic to your extension directory. You can use the provided examples as a reference.
 2. **Test Your Extension**:
-Run "npm start" it will build, move and start project with your extension.
+Run "npm run dev" it will build, move and start project with your extension.
 
 Follow Official Documentation Here [Directus Bundle Extension](https://docs.directus.io/extensions/bundles.html)
 
