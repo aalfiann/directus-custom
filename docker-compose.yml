@@ -7,9 +7,12 @@ services:
       - "8055:8055"
     volumes:
       - .:/app
-      - /app/node_modules
+      - app_node_modules:/app/node_modules
       - ./uploads:/app/uploads
       - ./extensions:/app/extensions
     env_file:
       - .env
     command: npm start
+
+volumes:
+  app_node_modules:
